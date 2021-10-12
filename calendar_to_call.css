@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+#calendar:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#calendar table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+  line-height: 1.5;
+  float: left;
+  margin: 10px 10px 0 0;
+  table-layout: fixed;
+}
+#calendar thead {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background: #04162e;
+}
+#calendar thead th {
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  color: #fff;
+}
+#calendar tbody th {
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  background: #efefef;
+}
+#calendar td {
+  vertical-align: top;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+#calendar .today{
+  background: #ccc;
+}
+#calendar .sat {
+  color: blue;
+}
+#calendar .sun {
+  color: red;
+}
+ul.eventList {
+  height: 80px;
+  padding:0;
+}
+ul.eventList li {
+  list-style:none;
+  margin: 0 0 5px;
+  padding:0;
+  font-size:12px;
+}
+ul.eventList li a {
+  border: 1px solid;
+  padding: 2px 4px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+ul.eventList li a:focus, ul.eventList li a:active {
+  text-decoration:none;
+}
+ul.eventList li a:hover {
+  cursor: pointer;
+  text-decoration:none;
+}
+
+
+ul.eventList li a.red {
+  color:#C7000B;
+  background:#fff;
+}
+ul.eventList li a.red:hover, ul.eventList li a.red.checked {
+  color:#fff;
+  background:#C7000B;
+}
+ul.eventList li a.orange {
+  color:#D28300;
+  background:#fff;
+}
+ul.eventList li a.orange:hover, ul.eventList li a.orange.checked {
+  color:#fff;
+  background:#D28300;
+}
+ul.eventList li a.yellow {
+  color:#DFD000;
+  background:#fff;
+}
+ul.eventList li a.yellow:hover, ul.eventList li a.yellow.checked {
+  color:#fff;
+  background:#DFD000;
+}
+ul.eventList li a.is {
+  color:#337ab7;
+  background:#fff;
+}
+ul.eventList li a.is:hover, ul.eventList li a.is.checked {
+  color:#fff;
+  background:#337ab7;
+}
+ul.eventList li a.green {
+  color:#00873C;
+  background:#fff;
+}
+ul.eventList li a.green:hover, ul.eventList li a.green.checked {
+  color:#fff;
+  background:#00873C;
+}
+ul.eventList li a.blue {
+  color:#005AA0;
+  background:#fff;
+}
+ul.eventList li a.blue:hover, ul.eventList li a.blue.checked {
+  color:#fff;
+  background:#005AA0;
+}
+ul.eventList li a.violet {
+  color:#181878;
+  background:#fff;
+}
+ul.eventList li a.violet:hover, ul.eventList li a.violet.checked {
+  color:#fff;
+  background:#181878;
+}
+ul.eventList li a.purple {
+  color:#800073;
+  background:#fff;
+}
+ul.eventList li a.purple:hover, ul.eventList li a.purple.checked {
+  color:#fff;
+  background:#800073;
+}
+.text-gray {
+  color: #ddd;
+}
+div.listWrap {
+  width: 100%;
+  overflow-y: scroll;
+  margin-bottom: 1px;
+  height: 100%;
+}
+
+
+#eventList {
+  margin-bottom: 20px;
+}
+#eventList h4 {
+  margin-top: 30px;
+}
+table.list {
+  width: auto;
+  margin-bottom: 0;
+}
+table.list * {
+  text-align: center!important;
+  vertical-align:middle!important;
+}
+table.list th.time {
+  min-width:70px;
+  font-size:12px;
+}
+table.list td {
+  min-width: 100px;
+  height: 80px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+table.list td.dummy{
+  background:#eee;
+}
+html,body {
+  width:100%;
+  height: 100% 
+}
+div#loading {
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image:url('/export/ja/fujielectric_persons2023/images/loading.gif');
+  background-color:#fff;
+  background-position: center center;
+  background-repeat:no-repeat;
+}
+span#isDspExp {
+  font-size: 10px;
+  border: 1px solid #a94442;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+th.isSleep {
+  background: #eee!important;
+  color: #bbb;
+}
+td.isSleep {
+  background: #fff!important;
+  color: #ccc;
+}
+ul.eventList li a.isSleep {
+  color:#aaa!important;
+  background:#fff!important;
+}
+ul.eventList li a.isSleep:hover, ul.eventList li a.isSleep.checked {
+  color:#fff!important;
+  background:#aaa!important;
+}
