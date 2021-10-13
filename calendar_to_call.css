@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+/* ----------------------------------------------------------------
+* Common
+* Unique
+---------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------
+Common
+---------------------------------------------------------------- */
 #calendar:after {
   clear: both;
   display: block;
@@ -48,6 +56,9 @@
 #calendar .sun {
   color: red;
 }
+/* ----------------------------------------------------------------
+Unique
+---------------------------------------------------------------- */
 ul.eventList {
   height: 80px;
   padding:0;
@@ -60,7 +71,7 @@ ul.eventList li {
 }
 ul.eventList li a {
   border: 1px solid;
-  padding: 2px 4px;
+  padding: 4px 10px;
   border-radius: 4px;
   white-space: nowrap;
 }
@@ -71,8 +82,6 @@ ul.eventList li a:hover {
   cursor: pointer;
   text-decoration:none;
 }
-
-
 ul.eventList li a.red {
   color:#C7000B;
   background:#fff;
@@ -139,75 +148,4 @@ ul.eventList li a.purple:hover, ul.eventList li a.purple.checked {
 }
 .text-gray {
   color: #ddd;
-}
-div.listWrap {
-  width: 100%;
-  overflow-y: scroll;
-  margin-bottom: 1px;
-  height: 100%;
-}
-
-
-#eventList {
-  margin-bottom: 20px;
-}
-#eventList h4 {
-  margin-top: 30px;
-}
-table.list {
-  width: auto;
-  margin-bottom: 0;
-}
-table.list * {
-  text-align: center!important;
-  vertical-align:middle!important;
-}
-table.list th.time {
-  min-width:70px;
-  font-size:12px;
-}
-table.list td {
-  min-width: 100px;
-  height: 80px;
-  font-size: 10px;
-  white-space: nowrap;
-}
-table.list td.dummy{
-  background:#eee;
-}
-html,body {
-  width:100%;
-  height: 100% 
-}
-div#loading {
-  opacity: 0.9;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image:url('/export/ja/fujielectric_persons2023/images/loading.gif');
-  background-color:#fff;
-  background-position: center center;
-  background-repeat:no-repeat;
-}
-span#isDspExp {
-  font-size: 10px;
-  border: 1px solid #a94442;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-th.isSleep {
-  background: #eee!important;
-  color: #bbb;
-}
-td.isSleep {
-  background: #fff!important;
-  color: #ccc;
-}
-ul.eventList li a.isSleep {
-  color:#aaa!important;
-  background:#fff!important;
-}
-ul.eventList li a.isSleep:hover, ul.eventList li a.isSleep.checked {
-  color:#fff!important;
-  background:#aaa!important;
 }
