@@ -4,6 +4,74 @@
 ブラウザーで `index.html` を開くと、2021年10月のサンプルを表示します。
 表示自体にNode.jsやnpmパッケージは必要ありません。
 
+## 表示サンプル
+
+![2021年10月の月間カレンダー。月曜始まりで、会社名の予定リンク7件を表示しています。](docs/calendar-sample.png)
+
+`index.html` をブラウザーで開いた実際の表示です。
+10月8日にはD社とE社の2件が並び、会社名をクリックするとアラートが表示されます。
+画面幅やブラウザーによってフォントや余白は変わります。
+
+## サンプルコード
+
+### 同梱サンプルを開く
+
+リポジトリをダウンロードし、`index.html` をブラウザーで開いてください。
+表示年月と予定は [calendar-demo.js](calendar-demo.js) で変更できます。
+
+### 自分のページに組み込む
+
+次のHTMLを `calendar_to_call.js` と `calendar_to_call.css` と同じフォルダーに保存して開きます。
+この例は上の画像から10月8日の2件を取り出したものです。
+`calendar-demo.js` は読み込まず、このページ自身が予定を設定します。
+
+```html
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>予定カレンダー</title>
+    <link rel="stylesheet" href="calendar_to_call.css" />
+  </head>
+  <body>
+    <div id="calendar"></div>
+    <script src="calendar_to_call.js"></script>
+    <script>
+      const calendarConfiguration = {
+        ym: '2021/10',
+        db: [
+          {
+            event_time: '2021/10/08',
+            corp_name: 'D社',
+            class_name: 'blue',
+            js_function: "javascript:alert('D社');",
+          },
+          {
+            event_time: '2021/10/08',
+            corp_name: 'E社',
+            class_name: 'orange',
+            js_function: "javascript:alert('E社');",
+          },
+        ],
+      };
+
+      const calendarContainer = document.getElementById('calendar');
+      if (calendarContainer) {
+        calendarContainer.insertAdjacentHTML(
+          'beforeend',
+          setCalendar(calendarConfiguration),
+        );
+      }
+    </script>
+  </body>
+</html>
+```
+
+スクリプトを表示先のdiv要素より後に置くことで、要素が存在してから描画します。
+現在の年月を表示する場合は `ym` を省略し、予定の日付も表示対象の年月に合わせてください。
+`js_function` に指定する処理は、ページ側で管理する固定のコードに限定してください。
+
 ## ファイルの役割
 
 - `calendar_to_call.js`: 年月と予定を受け取り、カレンダーのHTMLを生成します。
