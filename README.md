@@ -90,6 +90,29 @@
 `js_function` はJavaScriptも実行できる既存仕様なので、信頼できるコードで指定してください。
 外部入力をそのまま渡す用途には対応していません。
 
+## 配布用パッケージ
+
+`npm run build` で `dist/` に実行用ファイルとZIPを生成します。
+`dist/` は生成物のためGitの管理対象から除外しています。
+
+```text
+dist/
+├── index.html
+├── calendar_to_call.js
+├── calendar-demo.js
+├── calendar_to_call.css
+└── calendar-to-call.zip
+```
+
+ZIPには上のHTML・JavaScript・CSSの4ファイルだけが入り、展開後に
+`index.html` をブラウザーで開けば使えます。
+開発依存、テスト、設定、README、画像は含みません。
+元のファイル内容を保つZIP圧縮で、JavaScriptやCSSのminifyは行いません。
+
+生成にはNode.js 24以降とPowerShellを使い、追加のnpm依存はありません。
+Windowsは標準のWindows PowerShell、Linux/macOSは `pwsh` を使用します。
+GitHub Actionsでも生成し、実行結果のArtifactsからZIPを取得できます。
+
 ## 開発とチェック
 
 開発ツールにはNode.js 24以降とnpmを使用します。
