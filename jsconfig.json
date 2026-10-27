@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "target": "ES2020",
+    "module": "preserve",
+    "types": [],
+    "strict": true
+  },
+  "files": ["calendar_to_call.js", "calendar-demo.js"]
+}

@@ -11,7 +11,7 @@ Common
 #calendar:after {
   clear: both;
   display: block;
-  content: "";
+  content: '';
 }
 #calendar table {
   border-collapse: collapse;
@@ -47,7 +47,7 @@ Common
   border-bottom: 1px solid #ccc;
   text-align: center;
 }
-#calendar .today{
+#calendar .today {
   background: #ccc;
 }
 #calendar .sat {
@@ -61,13 +61,13 @@ Unique
 ---------------------------------------------------------------- */
 ul.eventList {
   height: 80px;
-  padding:0;
+  padding: 0;
 }
 ul.eventList li {
-  list-style:none;
+  list-style: none;
   margin: 0 0 5px;
-  padding:0;
-  font-size:12px;
+  padding: 0;
+  font-size: 12px;
 }
 ul.eventList li a {
   border: 1px solid;
@@ -75,76 +75,85 @@ ul.eventList li a {
   border-radius: 4px;
   white-space: nowrap;
 }
-ul.eventList li a:focus, ul.eventList li a:active {
-  text-decoration:none;
+ul.eventList li a:focus,
+ul.eventList li a:active {
+  text-decoration: none;
 }
 ul.eventList li a:hover {
   cursor: pointer;
-  text-decoration:none;
+  text-decoration: none;
 }
 ul.eventList li a.red {
-  color:#C7000B;
-  background:#fff;
+  color: #c7000b;
+  background: #fff;
 }
-ul.eventList li a.red:hover, ul.eventList li a.red.checked {
-  color:#fff;
-  background:#C7000B;
+ul.eventList li a.red:hover,
+ul.eventList li a.red.checked {
+  color: #fff;
+  background: #c7000b;
 }
 ul.eventList li a.orange {
-  color:#D28300;
-  background:#fff;
+  color: #d28300;
+  background: #fff;
 }
-ul.eventList li a.orange:hover, ul.eventList li a.orange.checked {
-  color:#fff;
-  background:#D28300;
+ul.eventList li a.orange:hover,
+ul.eventList li a.orange.checked {
+  color: #fff;
+  background: #d28300;
 }
 ul.eventList li a.yellow {
-  color:#DFD000;
-  background:#fff;
+  color: #dfd000;
+  background: #fff;
 }
-ul.eventList li a.yellow:hover, ul.eventList li a.yellow.checked {
-  color:#fff;
-  background:#DFD000;
+ul.eventList li a.yellow:hover,
+ul.eventList li a.yellow.checked {
+  color: #fff;
+  background: #dfd000;
 }
 ul.eventList li a.is {
-  color:#337ab7;
-  background:#fff;
+  color: #337ab7;
+  background: #fff;
 }
-ul.eventList li a.is:hover, ul.eventList li a.is.checked {
-  color:#fff;
-  background:#337ab7;
+ul.eventList li a.is:hover,
+ul.eventList li a.is.checked {
+  color: #fff;
+  background: #337ab7;
 }
 ul.eventList li a.green {
-  color:#00873C;
-  background:#fff;
+  color: #00873c;
+  background: #fff;
 }
-ul.eventList li a.green:hover, ul.eventList li a.green.checked {
-  color:#fff;
-  background:#00873C;
+ul.eventList li a.green:hover,
+ul.eventList li a.green.checked {
+  color: #fff;
+  background: #00873c;
 }
 ul.eventList li a.blue {
-  color:#005AA0;
-  background:#fff;
+  color: #005aa0;
+  background: #fff;
 }
-ul.eventList li a.blue:hover, ul.eventList li a.blue.checked {
-  color:#fff;
-  background:#005AA0;
+ul.eventList li a.blue:hover,
+ul.eventList li a.blue.checked {
+  color: #fff;
+  background: #005aa0;
 }
 ul.eventList li a.violet {
-  color:#181878;
-  background:#fff;
+  color: #181878;
+  background: #fff;
 }
-ul.eventList li a.violet:hover, ul.eventList li a.violet.checked {
-  color:#fff;
-  background:#181878;
+ul.eventList li a.violet:hover,
+ul.eventList li a.violet.checked {
+  color: #fff;
+  background: #181878;
 }
 ul.eventList li a.purple {
-  color:#800073;
-  background:#fff;
+  color: #800073;
+  background: #fff;
 }
-ul.eventList li a.purple:hover, ul.eventList li a.purple.checked {
-  color:#fff;
-  background:#800073;
+ul.eventList li a.purple:hover,
+ul.eventList li a.purple.checked {
+  color: #fff;
+  background: #800073;
 }
 .text-gray {
   color: #ddd;
