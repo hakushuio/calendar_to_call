@@ -1,7 +1,7 @@
 import js from '@eslint/js';
 
 export default [
-  { ignores: ['node_modules/**'] },
+  { ignores: ['node_modules/**', 'dist/**'] },
   js.configs.recommended,
   {
     files: ['calendar_to_call.js', 'calendar-demo.js'],
@@ -19,7 +19,7 @@ export default [
     files: ['**/*.cjs'],
     languageOptions: {
       sourceType: 'commonjs',
-      globals: { __dirname: 'readonly' },
+      globals: { __dirname: 'readonly', process: 'readonly' },
     },
   },
 ];
