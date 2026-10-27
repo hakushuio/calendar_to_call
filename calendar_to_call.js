@@ -1,3 +1,12 @@
+function escapeCalendarHtml(text) {
+  return String(text).replace(/[&<>"']/g, function(character) {
+    return {
+      '&': '&amp;', '<': '&lt;', '>': '&gt;',
+      '"': '&quot;', "'": '&#39;'
+    }[character];
+  });
+}
+
 function setCalendar(obj){
   // 現在の日時を取得
 	var CurrentDate = new Date();
@@ -51,7 +60,7 @@ function setCalendar(obj){
 			//for文で生成している日付の値を格納
 			currentSetDateNum = calendarTblCellLength[j + (i * 7)];
       //現在日時、土曜日、日曜日を視覚化する
-			if(displayMonth == CurrentMonth && currentSetDateNum == CurrentDay){
+			if(displayYear == CurrentYear && displayMonth == CurrentMonth && currentSetDateNum == CurrentDay){
 				source += '<td class="today">';
 			}else if(j === 5){
 				source += '<td class="sat">';
@@ -67,12 +76,11 @@ function setCalendar(obj){
 				source += '<ul class="eventList">';
 				//「yyyy/mm/dd」 の形式で比較する
 				var serchParam = serchParamParts + ( '00' + currentSetDateNum ).slice( -2 );
-        console.log(serchParam);
 			
         if(obj.db){
           for(var k=0;k<obj.db.length;k++){
             if(obj.db[k].event_time == serchParam){
-              source += '<li><a class="' + obj.db[k].class_name + '" href="' + obj.db[k].js_function + '">' + obj.db[k].corp_name + '</li>';
+              source += '<li><a class="' + escapeCalendarHtml(obj.db[k].class_name) + '" href="' + escapeCalendarHtml(obj.db[k].js_function) + '">' + escapeCalendarHtml(obj.db[k].corp_name) + '</a></li>';
             }
           }
         }
